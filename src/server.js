@@ -23,3 +23,6 @@ server.listen(process.env.SERVER_PORT, () => {
     )
   );
 });
+
+
+export default server;
