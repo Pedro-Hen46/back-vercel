@@ -13,7 +13,7 @@ server.use(express.json());
 server.use(userRouter);
 
 server.get("/",(req, res) => {
-  res.status(200).json({ message: "It's done, you got it" });
+  res.status(200).json({ message: "Hello world" });
 });
 
 server.listen(process.env.SERVER_PORT, () => {
