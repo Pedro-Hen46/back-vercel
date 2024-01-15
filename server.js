@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import chalk from "chalk";
 
-import userRouter from "./routes/userRoute.js";
+import userRouter from "./src/routes/userRoute.js";
 
 dotenv.config();
 const server = express();
@@ -13,7 +13,7 @@ server.use(express.json());
 server.use(userRouter);
 
 server.get("/",(req, res) => {
-  res.status(200).json({ message: "Hello world" });
+  res.status(200).send("Api rodando com sucesso!");
 });
 
 server.listen(process.env.SERVER_PORT, () => {
@@ -24,5 +24,3 @@ server.listen(process.env.SERVER_PORT, () => {
   );
 });
 
-
-export default server;
