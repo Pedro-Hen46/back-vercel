@@ -13,7 +13,7 @@ export async function readFileModel(filename) {
         return config;
       });
 
-    return  ;
+    return resultJson;
   } catch (error) {
     console.log(error);
   }

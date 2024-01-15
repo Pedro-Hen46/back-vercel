@@ -1,4 +1,4 @@
-import { readFileModel } from "../utils/filesServices.js";
+import { readFileModel} from "../utils/filesServices.js";
 
 export async function loginUser(req, res) {
   const { password, email } = req.body;
@@ -23,3 +23,4 @@ export async function loginUser(req, res) {
     return console.log(error);
   }
 }
+

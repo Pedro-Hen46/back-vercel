@@ -1,0 +1,32 @@
+{
+    "vehicles": [
+      {
+        "id": 1,
+        "name": "HONDA CARGO 125",
+        "license": "ESQ3284",
+        "year": "2007",
+        "model": "CARGO 125",
+        "odometer": 57389,
+        "on_work": false
+      },  
+      {
+        "id": 2,
+        "name": "HONDA CARGO 125",
+        "license": "FDP 9951",
+        "year": "2007",
+        "model": "CARGO 125",
+        "odometer": 63442,
+        "on_work": false
+      },
+      {
+        "id": 3,
+        "name": "HONDA",
+        "license": "DYM 9113",
+        "year": "2010",
+        "model": "BIZ 125",
+        "odometer": 38567,
+        "on_work": false
+      }
+    ]
+  }
+  

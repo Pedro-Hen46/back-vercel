@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import chalk from "chalk";
 
 import userRouter from "./src/routes/userRoute.js";
+import vehiclesRoute from "./src/routes/vehiclesRoute.js";
 
 dotenv.config();
 const server = express();
@@ -11,7 +12,7 @@ server.use(cors());
 server.use(express.json());
 
 server.use(userRouter);
-
+server.use(vehiclesRoute);
 server.get("/",(req, res) => {
   res.status(200).send("Api rodando com sucesso!");
 });
