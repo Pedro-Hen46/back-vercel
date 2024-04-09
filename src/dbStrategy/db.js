@@ -1,19 +1,21 @@
-import pgk from "pg";
-import dotenv from "dotenv";
+import pg from 'pg';
 
-dotenv.config();
+const { Pool } = pg;
 
-const { Pool } = pgk;
-const configDatabase = {
-    connectionString: process.env.DATABASE_URL
-}
+const user = 'postgres';
+const password = 'Asp_170100';
+const host = 'localhost';
+const port = 5432;
+const database = 'fusion-facilities';
 
-if (process.env.MODE === "PROD") {
-    configDatabase.ssl = {
-        rejectUnauthorized: false
-    }
-}
+const connection = new Pool({
+  user,
+  password,
+  host,
+  port,
+  database
+});
 
-const connection = new Pool(configDatabase)
 
-export default connection
+
+export default connection;

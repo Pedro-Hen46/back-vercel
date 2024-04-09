@@ -1,8 +1,5 @@
 import { readFileModel} from "../utils/filesServices.js";
 import { getClientAsRegister } from "../repositories/clientRepository.js"
-import dotenv from "dotenv";
-
-dotenv.config();
 
 export async function loginUser(req, res) {
   const { password, email } = req.body;
@@ -30,13 +27,31 @@ export async function loginUser(req, res) {
 
 export async function checkUserAsRegister(req, res){
  const { email, password } = req.body;
- console.log(process.env.DATABASE_URL)
 
   try {
-    await getClientAsRegister(email, password);
+    const result = await getClientAsRegister(email, password);
 
+    console.log(result.rows[0]);
     return res.status(200).send();
   } catch (error) {
     return res.status(401).send();
+  }
+}
+
+export async function userDetails(req, res){
+  const { email:userEmail } = req.body;
+  
+  try {
+    const user = await getClientAsRegister(userEmail);
+    
+    if(user.rows.length !== 0){
+      return res.status(200).send(user.rows[0]);
+    }
+    
+    return res.status(404).send();
+
+  } catch (error) {
+    return res.status(404).send(error);
+    
   }
 }

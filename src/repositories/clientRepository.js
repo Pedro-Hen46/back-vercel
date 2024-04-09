@@ -8,9 +8,10 @@ export default async function insertClient(name, address, phone){
     `, [name, address, phone]);
 }
 
-export async function getClientAsRegister(email, pass){
+export async function getClientAsRegister(userEmail){
+    
+
     return await connection.query(`
-        SELECT * FROM clients
-        WHERE email = $1 AND password = $2
-    `, [email, pass]);
+        SELECT * FROM users WHERE email = $1
+    `, [userEmail]);
 }
