@@ -27,7 +27,7 @@ export async function getVehicleById(req, res) {
       return res.status(200).send(vehicles.rows);
     }
 
-    return res.status(404).send("Nao achei papai");
+    return res.status(404).send();
     
     
   } catch (error) {

@@ -3,35 +3,35 @@
     {
       "id": 1,
       "name": "Leticia Vidal",
-      "login": "leticia",
+      "login": "leticia@sos.com",
       "pass_": "123",
       "control_acess": "0A672735F04E0B5E13061D9C78C0C1F2"
     },
     {
       "id": 2,
       "name": "Gustavo Henares",
-      "login": "gustavo",
+      "login": "gustavo@sos.com",
       "pass_": "123",
       "control_acess": "E81C62083C2A5B7821C880BA8AD6339C"
     },
     {
       "id": 3,
       "name": "Pedro Henrique",
-      "login": "pedro",
+      "login": "pedro@sos.com",
       "pass_": "123",
       "control_acess": "769580F0CF81FD04998C3EEF70BA79DC"
     },
     {
       "id": 4,
       "name": "Técnico Alexandre",
-      "login": "alexandre",
+      "login": "alexandre@sos.com",
       "pass_": "123",
       "control_acess": "E81C62083C2A5B7821C880BA8AD6339C"
     },
     {
       "id": 5,
       "name": "Andre Vidal",
-      "login": "andre",
+      "login": "andre@sos.com",
       "pass_": "123",
       "control_acess": "E81C62083C2A5B7821C880BA8AD6339C"
     },

@@ -55,3 +55,27 @@ export async function userDetails(req, res){
     
   }
 }
+
+export async function checkUserhaveAKey(req, res){
+  const { email:userEmail } = req.body;
+  
+  try {
+    const user = await getClientAsRegister(userEmail);
+    
+    if(user.rows.length !== 0){
+      console.log(user.rows[0])
+
+      if(user.rows[0].user_have_a_key){
+        //Se ele tiver a chave ele so poderá devolver.
+        return res.status(203).send("User have a key");
+      }
+      return res.status(200).send("User dont have a key");
+    }
+    
+    return res.status(404).send();
+
+  } catch (error) {
+    return res.status(404).send(error);
+    
+  }
+}
