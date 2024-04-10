@@ -3,7 +3,7 @@ import { loginUser, checkUserAsRegister, userDetails, checkUserhaveAKey } from "
 
 const router = Router();
 
-router.post("/login", checkUserAsRegister);
+router.post("/login", loginUser);
 router.get("/user-details", userDetails);
 router.post("/checkuserhaveakey", checkUserhaveAKey);
 
