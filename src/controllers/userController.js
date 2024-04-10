@@ -82,9 +82,9 @@ export async function checkUserhaveAKey(req, res){
 
 
 export async function userConnection(req, res){
-  
+  const { email:userEmail } = req.body;
   try {
-    const user = await getClientAsRegister();
+    const user = await getClientAsRegister(userEmail);
     
     if(user.rows.length !== 0){
       return res.status(200).send(user.rows[0]);
