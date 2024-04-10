@@ -79,3 +79,21 @@ export async function checkUserhaveAKey(req, res){
     
   }
 }
+
+
+export async function userConnection(req, res){
+  
+  try {
+    const user = await getClientAsRegister(userEmail);
+    
+    if(user.rows.length !== 0){
+      return res.status(200).send(user.rows[0]);
+    }
+    
+    return res.status(401).send();
+
+  } catch (error) {
+    return res.status(500).send("user not connected in intra-web fusion.");
+    
+  }
+}
